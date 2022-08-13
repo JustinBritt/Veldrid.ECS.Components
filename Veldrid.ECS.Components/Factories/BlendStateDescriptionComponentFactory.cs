@@ -1,5 +1,6 @@
 ﻿namespace Veldrid.ECS.Components.Factories
 {
+    using Veldrid;
     using Veldrid.ECS.Components.InterfacesFactories;
     using Veldrid.ECS.Components.Structs;
 
@@ -9,13 +10,15 @@
         {
         }
 
-        public BlendStateDescriptionComponent Create()
+        public BlendStateDescriptionComponent Create(
+            BlendStateDescription value)
         {
             BlendStateDescriptionComponent component = default;
 
             try
             {
-                component = new BlendStateDescriptionComponent();
+                component = new BlendStateDescriptionComponent(
+                    value);
             }
             finally
             {

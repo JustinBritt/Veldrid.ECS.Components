@@ -1,5 +1,6 @@
 ﻿namespace Veldrid.ECS.Components.Factories
 {
+    using Veldrid;
     using Veldrid.ECS.Components.InterfacesFactories;
     using Veldrid.ECS.Components.Structs;
 
@@ -9,13 +10,15 @@
         {
         }
 
-        public DepthStencilStateDescriptionComponent Create()
+        public DepthStencilStateDescriptionComponent Create(
+            DepthStencilStateDescription value)
         {
             DepthStencilStateDescriptionComponent component = default;
 
             try
             {
-                component = new DepthStencilStateDescriptionComponent();
+                component = new DepthStencilStateDescriptionComponent(
+                    value);
             }
             finally
             {

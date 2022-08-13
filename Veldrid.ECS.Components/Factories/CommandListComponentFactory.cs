@@ -1,5 +1,6 @@
 ﻿namespace Veldrid.ECS.Components.Factories
 {
+    using Veldrid;
     using Veldrid.ECS.Components.InterfacesFactories;
     using Veldrid.ECS.Components.Structs;
 
@@ -9,13 +10,15 @@
         {
         }
 
-        public CommandListComponent Create()
+        public CommandListComponent Create(
+            CommandList value)
         {
             CommandListComponent component = default;
 
             try
             {
-                component = new CommandListComponent();
+                component = new CommandListComponent(
+                    value);
             }
             finally
             {

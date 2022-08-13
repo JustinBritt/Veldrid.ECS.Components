@@ -1,5 +1,6 @@
 ﻿namespace Veldrid.ECS.Components.Factories
 {
+    using Veldrid;
     using Veldrid.ECS.Components.InterfacesFactories;
     using Veldrid.ECS.Components.Structs;
 
@@ -9,13 +10,15 @@
         {
         }
 
-        public ViewportComponent Create()
+        public ViewportComponent Create(
+            Viewport value)
         {
             ViewportComponent component = default;
 
             try
             {
-                component = new ViewportComponent();
+                component = new ViewportComponent(
+                    value);
             }
             finally
             {

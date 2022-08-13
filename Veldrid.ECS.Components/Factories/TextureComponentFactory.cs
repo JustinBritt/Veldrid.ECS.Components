@@ -1,5 +1,6 @@
 ﻿namespace Veldrid.ECS.Components.Factories
 {
+    using Veldrid;
     using Veldrid.ECS.Components.InterfacesFactories;
     using Veldrid.ECS.Components.Structs;
 
@@ -9,13 +10,15 @@
         {
         }
 
-        public TextureComponent Create()
+        public TextureComponent Create(
+            Texture value)
         {
             TextureComponent component = default;
 
             try
             {
-                component = new TextureComponent();
+                component = new TextureComponent(
+                    value);
             }
             finally
             {

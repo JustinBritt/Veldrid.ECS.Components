@@ -1,5 +1,6 @@
 ﻿namespace Veldrid.ECS.Components.Factories
 {
+    using Veldrid;
     using Veldrid.ECS.Components.InterfacesFactories;
     using Veldrid.ECS.Components.Structs;
 
@@ -9,13 +10,15 @@
         {
         }
 
-        public GraphicsDeviceComponent Create()
+        public GraphicsDeviceComponent Create(
+            GraphicsDevice value)
         {
             GraphicsDeviceComponent component = default;
 
             try
             {
-                component = new GraphicsDeviceComponent();
+                component = new GraphicsDeviceComponent(
+                    value);
             }
             finally
             {

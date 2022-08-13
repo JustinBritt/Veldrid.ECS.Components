@@ -1,5 +1,6 @@
 ﻿namespace Veldrid.ECS.Components.Factories
 {
+    using Veldrid;
     using Veldrid.ECS.Components.InterfacesFactories;
     using Veldrid.ECS.Components.Structs;
 
@@ -9,13 +10,15 @@
         {
         }
 
-        public BufferDescriptionComponent Create()
+        public BufferDescriptionComponent Create(
+            BufferDescription value)
         {
             BufferDescriptionComponent component = default;
 
             try
             {
-                component = new BufferDescriptionComponent();
+                component = new BufferDescriptionComponent(
+                    value);
             }
             finally
             {

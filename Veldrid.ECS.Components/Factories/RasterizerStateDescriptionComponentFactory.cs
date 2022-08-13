@@ -1,5 +1,6 @@
 ﻿namespace Veldrid.ECS.Components.Factories
 {
+    using Veldrid;
     using Veldrid.ECS.Components.InterfacesFactories;
     using Veldrid.ECS.Components.Structs;
 
@@ -9,13 +10,15 @@
         {
         }
 
-        public RasterizerStateDescriptionComponent Create()
+        public RasterizerStateDescriptionComponent Create(
+            RasterizerStateDescription value)
         {
             RasterizerStateDescriptionComponent component = default;
 
             try
             {
-                component = new RasterizerStateDescriptionComponent();
+                component = new RasterizerStateDescriptionComponent(
+                    value);
             }
             finally
             {
