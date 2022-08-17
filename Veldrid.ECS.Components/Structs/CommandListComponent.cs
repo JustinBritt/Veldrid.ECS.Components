@@ -10,6 +10,6 @@
             this.Value = value;
         }
 
-        public CommandList Value { get; }
+        public CommandList Value { get; set; }
     }
 }

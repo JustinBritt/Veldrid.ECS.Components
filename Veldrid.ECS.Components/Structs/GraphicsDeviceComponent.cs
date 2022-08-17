@@ -10,6 +10,6 @@
             this.Value = value;
         }
 
-        public GraphicsDevice Value { get; }
+        public GraphicsDevice Value { get; set; }
     }
 }

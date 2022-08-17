@@ -10,6 +10,6 @@
             this.Value = value;
         }
 
-        public Viewport Value { get; }
+        public Viewport Value { get; set; }
     }
 }

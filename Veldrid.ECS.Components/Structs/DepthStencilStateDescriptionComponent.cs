@@ -10,6 +10,6 @@
             this.Value = value;
         }
 
-        public DepthStencilStateDescription Value { get; }
+        public DepthStencilStateDescription Value { get; set; }
     }
 }

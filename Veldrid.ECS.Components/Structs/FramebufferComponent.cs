@@ -10,6 +10,6 @@
             this.Value = value;
         }
 
-        public Framebuffer Value { get; }
+        public Framebuffer Value { get; set; }
     }
 }

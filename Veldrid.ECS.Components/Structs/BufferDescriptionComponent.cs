@@ -10,6 +10,6 @@
             this.Value = value;
         }
 
-        public BufferDescription Value { get; }
+        public BufferDescription Value { get; set; }
     }
 }

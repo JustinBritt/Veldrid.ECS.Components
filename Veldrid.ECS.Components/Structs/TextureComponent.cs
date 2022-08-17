@@ -10,6 +10,6 @@
             this.Value = value;
         }
 
-        public Texture Value { get; }
+        public Texture Value { get; set; }
     }
 }

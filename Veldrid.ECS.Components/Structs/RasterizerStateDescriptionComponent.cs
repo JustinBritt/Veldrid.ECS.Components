@@ -10,6 +10,6 @@
             this.Value = value;
         }
 
-        public RasterizerStateDescription Value { get; }
+        public RasterizerStateDescription Value { get; set; }
     }
 }

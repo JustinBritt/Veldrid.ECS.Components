@@ -10,6 +10,6 @@
             this.Value = value;
         }
 
-        public BlendStateDescription Value { get; }
+        public BlendStateDescription Value { get; set; }
     }
 }
