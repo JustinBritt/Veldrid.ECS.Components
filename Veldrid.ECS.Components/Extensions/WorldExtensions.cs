@@ -9,6 +9,18 @@
 
     public static class WorldExtensions
     {
+        public static GraphicsDevice GetGraphicsDeviceLast(
+            this World world)
+        {
+            return world
+                .GetEntities()
+                .With<GraphicsDeviceComponent>()
+                .AsEnumerable()
+                .Where(w => w.IsEnabled() && w.IsAlive)
+                .Select(w => w.Get<GraphicsDeviceComponent>().Value)
+                .Last();
+        }
+
         public static Viewport GetViewportLast(
             this World world)
         {
