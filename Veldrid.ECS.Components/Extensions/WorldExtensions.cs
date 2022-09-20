@@ -21,6 +21,18 @@
                 .Last();
         }
 
+        public static ref ViewportComponent GetViewportComponentLastRef(
+            this World world)
+        {
+            return ref world
+                .GetEntities()
+                .With<ViewportComponent>()
+                .AsEnumerable()
+                .Where(w => w.IsEnabled() && w.IsAlive)
+                .Last()
+                .Get<ViewportComponent>();
+        }
+
         public static Viewport GetViewportLast(
             this World world)
         {
