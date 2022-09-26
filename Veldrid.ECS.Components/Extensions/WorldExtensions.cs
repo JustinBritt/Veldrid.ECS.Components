@@ -9,6 +9,18 @@
 
     public static class WorldExtensions
     {
+        public static Framebuffer GetFramebufferLast(
+            this World world)
+        {
+            return world
+                .GetEntities()
+                .With<FramebufferComponent>()
+                .AsEnumerable()
+                .Where(w => w.IsEnabled() && w.IsAlive)
+                .Select(w => w.Get<FramebufferComponent>().Value)
+                .Last();
+        }
+
         public static GraphicsDevice GetGraphicsDeviceLast(
             this World world)
         {
